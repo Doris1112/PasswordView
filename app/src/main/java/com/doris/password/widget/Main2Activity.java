@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.doris.password.widget.library.PasswordNumberView;
+import com.doris.password.widget.library.PasswordViewListener;
 
 /**
  * @author Doris
@@ -20,7 +21,7 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         PasswordNumberView passwordNumberView = findViewById(R.id.password_number);
-        passwordNumberView.setListener(new PasswordNumberView.PasswordNumberViewListener() {
+        passwordNumberView.setListener(new PasswordViewListener() {
 
             @Override
             public void onFail(String wrongNumber) {
