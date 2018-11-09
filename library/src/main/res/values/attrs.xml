@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="PasswordNumberView">
+    <declare-styleable name="PasswordView">
         <attr name="type" format="enum">
             <enum name="set" value="0"/>
             <enum name="check" value="1"/>

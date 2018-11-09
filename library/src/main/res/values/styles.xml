@@ -4,23 +4,23 @@
     <style name="NumberInPasswordNumber">
         <item name="android:layout_width">54dp</item>
         <item name="android:layout_height">54dp</item>
-        <item name="android:background">@drawable/layout_selector_tran</item>
+        <item name="android:background">@drawable/password_view_layout_selector_tran</item>
         <item name="android:clickable">true</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">24sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textColor">@color/password_view_text_black</item>
     </style>
 
     <style name="NumberInPasswordBlend">
         <item name="android:layout_width">35dp</item>
         <item name="android:layout_height">54dp</item>
-        <item name="android:background">@drawable/layout_selector_tran</item>
+        <item name="android:background">@drawable/password_view_layout_selector_tran</item>
         <item name="android:clickable">true</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">24sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textColor">@color/password_view_text_black</item>
     </style>
 </resources>

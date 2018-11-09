@@ -12,23 +12,23 @@ import android.view.View;
  * @author Doris
  * @date 2018/11/3
  */
-public class CircleView extends View {
+public class PasswordCircleView extends View {
 
     private Paint mPaint;
     private int color = Color.BLACK;
 
-    public CircleView(Context context) {
+    public PasswordCircleView(Context context) {
         super(context);
         init();
     }
 
 
-    public CircleView(Context context, @Nullable AttributeSet attrs) {
+    public PasswordCircleView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public CircleView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public PasswordCircleView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }

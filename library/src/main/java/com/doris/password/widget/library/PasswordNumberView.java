@@ -52,20 +52,20 @@ public class PasswordNumberView extends FrameLayout implements View.OnClickListe
     public PasswordNumberView(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         inflate(getContext(), R.layout.view_password_number, this);
-        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.PasswordNumberView);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.PasswordView);
         try {
-            mPasswordType = typedArray.getInt(R.styleable.PasswordNumberView_type, mPasswordType);
-            mMinLength = typedArray.getInt(R.styleable.PasswordNumberView_minLength, mMinLength);
-            mMaxLength = typedArray.getInt(R.styleable.PasswordNumberView_maxLength, mMaxLength);
-            mNormalStatusColor = typedArray.getColor(R.styleable.PasswordNumberView_normalStateColor, mNormalStatusColor);
-            mWrongStatusColor = typedArray.getColor(R.styleable.PasswordNumberView_wrongStateColor, mWrongStatusColor);
-            mCorrectStatusColor = typedArray.getColor(R.styleable.PasswordNumberView_correctStateColor, mCorrectStatusColor);
-            mNumberTextColor = typedArray.getColor(R.styleable.PasswordNumberView_numberTextColor, mNumberTextColor);
-            mFirstInputTip = typedArray.getString(R.styleable.PasswordNumberView_firstInputTip);
-            mSecondInputTip = typedArray.getString(R.styleable.PasswordNumberView_secondInputTip);
-            mWrongLengthTip = typedArray.getString(R.styleable.PasswordNumberView_wrongLengthTip);
-            mWrongInputTip = typedArray.getString(R.styleable.PasswordNumberView_wrongInputTip);
-            mCorrectInputTip = typedArray.getString(R.styleable.PasswordNumberView_correctInputTip);
+            mPasswordType = typedArray.getInt(R.styleable.PasswordView_type, mPasswordType);
+            mMinLength = typedArray.getInt(R.styleable.PasswordView_minLength, mMinLength);
+            mMaxLength = typedArray.getInt(R.styleable.PasswordView_maxLength, mMaxLength);
+            mNormalStatusColor = typedArray.getColor(R.styleable.PasswordView_normalStateColor, mNormalStatusColor);
+            mWrongStatusColor = typedArray.getColor(R.styleable.PasswordView_wrongStateColor, mWrongStatusColor);
+            mCorrectStatusColor = typedArray.getColor(R.styleable.PasswordView_correctStateColor, mCorrectStatusColor);
+            mNumberTextColor = typedArray.getColor(R.styleable.PasswordView_numberTextColor, mNumberTextColor);
+            mFirstInputTip = typedArray.getString(R.styleable.PasswordView_firstInputTip);
+            mSecondInputTip = typedArray.getString(R.styleable.PasswordView_secondInputTip);
+            mWrongLengthTip = typedArray.getString(R.styleable.PasswordView_wrongLengthTip);
+            mWrongInputTip = typedArray.getString(R.styleable.PasswordView_wrongInputTip);
+            mCorrectInputTip = typedArray.getString(R.styleable.PasswordView_correctInputTip);
         } finally {
             typedArray.recycle();
         }
@@ -339,7 +339,7 @@ public class PasswordNumberView extends FrameLayout implements View.OnClickListe
         if (mPasswordLayout.getChildCount() >= mMaxLength) {
             return;
         }
-        CircleView psdView = new CircleView(getContext());
+        PasswordCircleView psdView = new PasswordCircleView(getContext());
         int size = dpToPx();
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(size, size);
         params.setMargins(size, 0, size, 0);
@@ -421,7 +421,7 @@ public class PasswordNumberView extends FrameLayout implements View.OnClickListe
     private void setPSDViewBackgroundResource(int color) {
         int childCount = mPasswordLayout.getChildCount();
         for (int i = 0; i < childCount; i++) {
-            ((CircleView) mPasswordLayout.getChildAt(i)).setColor(color);
+            ((PasswordCircleView) mPasswordLayout.getChildAt(i)).setColor(color);
         }
     }
 
