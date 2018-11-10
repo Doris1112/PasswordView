@@ -173,12 +173,6 @@ public class PasswordNumberView extends FrameLayout implements View.OnClickListe
      * @param localPassword the code will to check
      */
     public PasswordNumberView setLocalPassword(String localPassword) {
-        for (int i = 0; i < localPassword.length(); i++) {
-            char c = localPassword.charAt(i);
-            if (c < '0' || c > '9') {
-                throw new RuntimeException("must be number digit");
-            }
-        }
         this.mLocalPassword = localPassword;
         this.mPasswordType = PasswordViewType.typeCheck;
         return this;
